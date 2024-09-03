@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Hythe Limited - Agro-Allied and Energy Solutions</title>
+  <!-- <link rel="stylesheet" href="styles.css"> -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+  <link rel="icon" type="image/x-icon" href="images/favico.png">
+</head>
+
+<body>
+  <div class="flex flex-col md:flex-row justify-between px-5 md:px-10 py-5 bg-[#03071e] rounded-b-3xl">
+    <header class="flex-shrink-0 mb-4 md:mb-0">
+      <img class="w-32 mx-auto md:mx-0" src="images/thl-logo.png" alt="thl logo">
+    </header>
+    <nav class="flex flex-col md:flex-row items-center">
+      <ul class="flex flex-col md:flex-row gap-4 md:gap-5 font-extrabold text-white text-center md:text-left">
+        <li><a href="#about" class="block py-2 px-4">About Us</a></li>
+        <li><a href="#agro" class="block py-2 px-4">Agro-Allied Sector</a></li>
+        <li><a href="#energy" class="block py-2 px-4">Energy Sector</a></li>
+        <li><a href="#vision" class="block py-2 px-4">Our Vision</a></li>
+        <li><a href="#contact" class="block py-2 px-4">Contact Us</a></li>
+      </ul>
+    </nav>
+  </div>
+  <main>
+    <section id="about" class="px-4 md:px-24 py-12 flex flex-col gap-y-5">
+      <div>
+        <h3 class="py-5 font-bold text-2xl">About Us</h3>
+        <p> Tech Hythe Limited (THL) is a diversified company operating at the forefront of the agro-allied and renewable energy sectors. We are committed to sustainable development, leveraging cutting-edge technologies and innovative strategies to drive growth across our core business areas. Our mission is to enhance agricultural productivity and efficiency while significantly contributing to the global transition toward renewable energy sources. </p>
+      </div>
+      <div class="flex flex-col md:flex-row gap-4 flex-wrap">
+        <img class="flex-grow object-cover h-48 rounded-md transition-transform transform hover:scale-105 duration-300" src="images/agro-farm-with-tractor.webp" alt="farm with tractor on it">
+        <img class="flex-grow object-cover h-48 rounded-md transition-transform transform hover:scale-105 duration-300" src="images/aeroview-farm.webp" alt="aeroview of a farm">
+        <img class="flex-grow object-cover h-48 rounded-md transition-transform transform hover:scale-105 duration-300" src="images/chicken-farm.webp" alt="chicken farming">
+      </div>
+      <div class="mt-5">
+        <a href="#contact" class="rounded-full bg-[#000000] text-white hover:text-green-400 p-3 font-bold">Contact Us</a>
+      </div>
+    </section>
+    <section id="agro" class="px-6 md:px-24 py-8 md:py-12 bg-[#b0c4b1]">
+      <div class="mb-5">
+        <h3 class="py-5 font-bold text-xl md:text-2xl">Agro-Allied Sector</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <p class="col-span-1 md:col-span-2">THL is a major player in the agro-allied industry, with operations spanning the entire agricultural value chain. We apply modern technology to traditional farming practices, ensuring increased productivity, sustainability, and food security.</p>
+          <div class="flex items-start justify-center md:justify-end">
+            <a href="#contact" class="rounded-full hover:bg-green-600 bg-green-400 text-white p-3 font-bold">Partner With Us</a>
+          </div>
+        </div>
+        </*+ /div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-5 mb-4">
+          <div>
+            <p class="mb-2">
+              <strong class="block mb-2">Precision Agriculture</strong> We use advanced data analytics, satellite imagery, and IoT devices to monitor crop health, optimize planting schedules, and manage resources efficiently.
+            </p>
+            <img class="w-full rounded-2xl" src="images/data-analysis.webp" alt="data analytics">
+          </div>
+          <div>
+            <p class="mb-2">
+              <strong class="block mb-2">Agro-Processing</strong> Our state-of-the-art facilities transform raw agricultural products into market-ready goods, ensuring quality and meeting international standards.
+            </p>
+            <img class="w-full rounded-2xl" src="images/unplucked-fruit.webp" alt="fruits">
+          </div>
+          <div>
+            <p class="mb-2">
+              <strong class="block mb-2">Sustainable Practices</strong> We promote organic fertilizers, integrated pest management, and water conservation techniques to protect the environment and ensure long-term operational viability.
+            </p>
+            <img class="w-full rounded-2xl" src="images/fertilizer.webp" alt="organic fertilizer">
+          </div>
+          <div>
+            <p class="mb-2">
+              <strong class="block mb-2">Supply Chain Management</strong> Our resilient supply chain connects farmers with local and international markets, delivering fresh, high-quality products.
+            </p>
+            <img class="w-full rounded-2xl" src="images/shipping.webp" alt="supply chain">
+          </div>
+        </div>
+    </section>
+    <section id="energy" class="px-4 md:px-24 py-12">
+      <div class="mb-5">
+        <h3 class="py-5 font-bold text-xl md:text-2xl">Energy Sector</h3>
+        <p>THL is also a significant player in the renewable energy sector, focusing on developing, deploying, and managing projects that contribute to reducing global carbon emissions and fostering energy independence.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:row-start-1 md:row-end-3 p-4 text-white rounded-2xl bg-[#034698] flex items-center text-center">
+          <p>
+            <strong class="block mb-2">Solar Energy</strong> We operate large-scale solar farms and offer off-grid solar solutions to empower rural communities with reliable, clean energy.
+          </p>
+        </div>
+        <div class="bg-[#88bedb] p-4 rounded-2xl flex items-center text-center">
+          <p class="mb-2">
+            <strong class="block mb-2">Wind Energy</strong> Our strategically located wind farms harness the power of wind to diversify the energy mix and reduce fossil fuel dependence.
+          </p>
+        </div>
+        <div class="bg-[#88bedb] p-4 rounded-2xl flex items-center text-center">
+          <p class="mb-2">
+            <strong class="block mb-2">Bioenergy</strong> We pioneer bioenergy solutions by converting agricultural waste into renewable energy, addressing waste management challenges and supporting a circular economy.
+          </p>
+        </div>
+        <div class="md:col-start-2 md:col-end-4 p-4 text-white rounded-2xl bg-[#034698] flex items-center text-center">
+          <p class="mb-2">
+            <strong class="block mb-2">Energy Storage & Distribution</strong> THL invests in advanced storage technologies to ensure stable power, even when natural energy sources are unavailable.
+          </p>
+        </div>
+      </div>
+      <div class="flex items-start mt-5">
+        <a href="#contact" class="rounded-full bg-[#000000] text-white hover:text-green-400 p-3 font-bold">Explore Our Energy Solutions</a>
+      </div>
+    </section>
+    <section id="vision" class="px-6 md:px-24 py-8 md:py-12 bg-neutral-500">
+      <div class="mb-5">
+        <h3 class="py-5 font-bold text-xl md:text-2xl text-white">Our Vision</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <p class="col-span-1 md:col-span-2 text-white">At Tech Hythe Limited, our vision is to lead the future of global development at the intersection of sustainable agriculture and renewable energy. We aim to:</p>
+          <div class="flex items-start justify-center md:justify-end">
+            <a href="#contact" class="rounded-full hover:bg-green-600 bg-green-400 text-white p-3 font-bold">Join Our Global Vision</a>
+          </div>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-3">
+        <div class="p-3 rounded-2xl bg-[#A3D9A5] text-center">
+          <p><strong class="block mb-2">Innovate Continuously</strong> Our R&D teams work tirelessly to stay ahead of industry trends, enhancing agricultural and energy technologies.</p>
+        </div>
+        <div class="p-3 rounded-2xl  bg-[#4B4B4B] text-white text-center">
+          <p><strong class="block mb-2">Promote Sustainability</strong> We are dedicated to minimizing our carbon footprint, promoting biodiversity, and safeguarding the future of our planet.</p>
+        </div>
+        <div class="p-3 rounded-2xl bg-[#4B4B4B] text-white text-center">
+          <p><strong class="block mb-2">Empower Communities</strong> We create jobs, enhance skills, and improve livelihoods by focusing on local content in our projects.</p>
+        </div>
+        <div class="p-3 rounded-2xl bg-[#A3D9A5] text-center">
+          <p><strong class="block mb-2">Expand Globally</strong> With international partnerships and strategic alliances, THL is expanding its global footprint in agro-allied and renewable energy markets.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="px-6 md:px-24 py-8 md:py-12">
+      <div class="max-w-xl mx-auto">
+        <h3 class="text-xl md:text-2xl font-bold mb-4">Contact Us</h3>
+        <form action="send-email.php" method="POST" class="space-y-4">
+          <div>
+            <label for="name" class="block mb-2 font-semibold">Name:</label>
+            <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Name" required>
+          </div>
+          <div>
+            <label for="email" class="block mb-2 font-semibold">Email:</label>
+            <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Email" required>
+          </div>
+          <div>
+            <label for="phone" class="block mb-2 font-semibold">Phone:</label>
+            <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Contact Number" required>
+          </div>
+          <div>
+            <label for="message" class="block mb-2 font-semibold">Message:</label>
+            <textarea id="message" name="message" class="w-full p-3 border border-gray-300 rounded-md" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <div>
+            <button type="submit" class="p-3 rounded-full bg-green-500 text-white font-bold hover:bg-green-600 transition-colors">Get in Touch</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="text-center p-5 bg-[#03071e] rounded-t-3xl text-white font-bold">
+    <p>&copy; 2024 Tech Hythe Limited. All Rights Reserved.</p>
+    <p>+234 706 761 3160 | +234 805 933 0502 | <a href="mailto:techhythelimited@gmail.com">techhythelimited@gmail.com</a></p>
+  </footer>
+</body>
+
+</html>
