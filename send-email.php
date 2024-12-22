@@ -2,7 +2,6 @@
 require 'vendor/autoload.php';
 
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\PHPMailer;
 use Dotenv\Dotenv;
 
@@ -24,8 +23,8 @@ try {
   $mail->Port = '465';
   $mail->isHTML(false);
 
-  $mail->Username = $_ENV['EMAIL'];  
-  $mail->Password = $_ENV['PASSWORD']; 
+  $mail->Username = $_ENV['EMAIL'];
+  $mail->Password = $_ENV['PASSWORD'];
 
   $mail->setFrom($email, $name);
   $mail->addAddress($_ENV["EMAIL"], "Joshua");
@@ -35,7 +34,7 @@ try {
 
   $mail->send();
 
-  echo "Email Successfully Sent.";
+  echo "Email Successfully Sent. <a href='/'>Go to Home Page</a>";
 } catch (Exception $e) {
-  echo "Error sending email: {$mail->ErrorInfo}";
+  echo "Error sending email: {$mail->ErrorInfo}. <a href='/'>Go to Home Page</a>";
 }
