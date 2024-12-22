@@ -1,0 +1,18 @@
+{
+	"name": "dell/thl",
+	"autoload": {
+		"psr-4": {
+			"Dell\\Thl\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Joshua O. Olaoye",
+			"email": "klasik@byui.edu"
+		}
+	],
+	"require": {
+		"phpmailer/phpmailer": "^6.9",
+		"vlucas/phpdotenv": "^5.6"
+	}
+}

@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => '__root__',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'name' => 'dell/thl',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '7d71da8b0ff5348d1a6e45d44475bc61d098e13d',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+        'dell/thl' => array(
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '7d71da8b0ff5348d1a6e45d44475bc61d098e13d',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

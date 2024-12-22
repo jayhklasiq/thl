@@ -31,6 +31,7 @@ class ComposerStaticInit2185d2f99bcd56787481d9357a5972d3
         'D' => 
         array (
             'Dotenv\\' => 7,
+            'Dell\\Thl\\' => 9,
         ),
     );
 
@@ -62,6 +63,10 @@ class ComposerStaticInit2185d2f99bcd56787481d9357a5972d3
         'Dotenv\\' => 
         array (
             0 => __DIR__ . '/..' . '/vlucas/phpdotenv/src',
+        ),
+        'Dell\\Thl\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

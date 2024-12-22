@@ -1,10 +1,9 @@
 <?php
+require 'vendor/autoload.php';
 
-require "vendor/autoload.php";
-
-use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\PHPMailer;
 use Dotenv\Dotenv;
 
 $dotenv = Dotenv::createImmutable(__DIR__);
@@ -25,8 +24,8 @@ try {
   $mail->Port = '465';
   $mail->isHTML(false);
 
-  $mail->Username = $_ENV["EMAIL"];
-  $mail->Password = $_ENV["PASSWORD"];
+  $mail->Username = $_ENV['EMAIL'];  
+  $mail->Password = $_ENV['PASSWORD']; 
 
   $mail->setFrom($email, $name);
   $mail->addAddress($_ENV["EMAIL"], "Joshua");
