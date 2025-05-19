@@ -142,24 +142,24 @@
             <label for="name" class="block mb-2 font-semibold">Name:</label>
             <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Name" required>
           </div>
-            <div>
+          <div>
             <label for="email" class="block mb-2 font-semibold">Email:</label>
-            <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
             <span id="emailError" class="text-red-500 hidden">Please enter a valid email address.</span>
-            </div>
-            <div>
+          </div>
+          <div>
             <label for="phone" class="block mb-2 font-semibold">Phone:</label>
             <input type="tel" id="phone" name="phone" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Contact Number" required pattern="\+\d{12,15}">
             <span id="phoneError" class="text-red-500 hidden">Please enter a valid phone number.</span>
-            </div>
-            <script>
+          </div>
+          <script>
             document.getElementById('email').addEventListener('blur', function() {
               var emailInput = this;
               var emailError = document.getElementById('emailError');
               if (!emailInput.checkValidity()) {
-              emailError.classList.remove('hidden');
+                emailError.classList.remove('hidden');
               } else {
-              emailError.classList.add('hidden');
+                emailError.classList.add('hidden');
               }
             });
 
@@ -167,12 +167,12 @@
               var phoneInput = this;
               var phoneError = document.getElementById('phoneError');
               if (!phoneInput.checkValidity()) {
-              phoneError.classList.remove('hidden');
+                phoneError.classList.remove('hidden');
               } else {
-              phoneError.classList.add('hidden');
+                phoneError.classList.add('hidden');
               }
             });
-            </script>
+          </script>
           <div>
             <label for="message" class="block mb-2 font-semibold">Message:</label>
             <textarea id="message" name="message" class="w-full p-3 border border-gray-300 rounded-md" rows="5" placeholder="Your Message" required></textarea>
