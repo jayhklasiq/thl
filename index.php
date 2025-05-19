@@ -186,7 +186,7 @@
   </main>
   <footer class="text-center p-5 bg-[#03071e] rounded-t-3xl text-white font-bold">
     <p>&copy; 2024 Tech Hythe Limited. All Rights Reserved.</p>
-    <p>+234 706 761 3160 | +234 805 933 0502 | <a href="mailto:techhythelimited@gmail.com">techhythelimited@gmail.com</a></p>
+    <p>+234 706 761 3160 | +234 805 933 0502 | <a href="mailto:info@thlimited.africa">info@thlimited.africa</a></p>
   </footer>
 </body>
 
