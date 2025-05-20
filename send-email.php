@@ -19,7 +19,7 @@ try {
   $mail->isSMTP();
   $mail->SMTPAuth = true;
   $mail->SMTPSecure = 'ssl';
-  $mail->Host = 'smtp.gmail.com';
+  $mail->Host = 'smtp.zoho.com';
   $mail->Port = '465';
   $mail->isHTML(false);
 
