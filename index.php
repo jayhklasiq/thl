@@ -8,15 +8,22 @@
   <!-- <link rel="stylesheet" href="styles.css"> -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
-  <link rel="icon" type="image/x-icon" href="images/favico.png">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
 <body>
   <div class="flex flex-col md:flex-row justify-between px-5 md:px-10 py-5 bg-[#03071e] rounded-b-3xl">
-    <header class="flex-shrink-0 mb-4 md:mb-0">
-      <img class="w-32 mx-auto md:mx-0" src="images/thl-logo.png" alt="thl logo">
-    </header>
-    <nav class="flex flex-col md:flex-row items-center">
+    <div class="flex justify-between items-center w-full md:w-auto">
+      <header class="flex-shrink-0">
+        <img class="w-32" src="images/thl-logo.png" alt="thl logo">
+      </header>
+      <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="hidden md:flex flex-col md:flex-row items-center w-full md:w-auto">
       <ul class="flex flex-col md:flex-row gap-4 md:gap-5 font-extrabold text-white text-center md:text-left">
         <li><a href="#about" class="block py-2 px-4">About Us</a></li>
         <li><a href="#agro" class="block py-2 px-4">Agro-Allied Sector</a></li>
@@ -137,11 +144,12 @@
     <section id="contact" class="px-6 md:px-24 py-8 md:py-12">
       <div class="max-w-xl mx-auto">
         <h3 class="text-xl md:text-2xl font-bold mb-4">Contact Us</h3>
-        <form action="send-email.php" method="POST" class="space-y-4">
+        <form action="./send-email.php" method="POST" class="space-y-4">
           <div>
             <label for="name" class="block mb-2 font-semibold">Name:</label>
             <input type="text" id="name" name="name" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Name" required>
           </div>
+
           <div>
             <label for="email" class="block mb-2 font-semibold">Email:</label>
             <input type="email" id="email" name="email" class="w-full p-3 border border-gray-300 rounded-md" placeholder="Your Email" required pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
@@ -185,9 +193,64 @@
     </section>
   </main>
   <footer class="text-center p-5 bg-[#03071e] rounded-t-3xl text-white font-bold">
-    <p>&copy; 2024 Tech Hythe Limited. All Rights Reserved.</p>
+    <p>&copy; <span id="current-year"></span> Tech Hythe Limited. All Rights Reserved.</p>
     <p>+234 706 761 3160 | +234 805 933 0502 | <a href="mailto:info@thlimited.africa">info@thlimited.africa</a></p>
   </footer>
+
+  <script>
+    // Set the current year in the footer
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuLinks = mobileMenu.querySelectorAll('a');
+
+    // Toggle menu when hamburger is clicked
+    mobileMenuButton.addEventListener('click', function(e) {
+      e.stopPropagation();
+      mobileMenu.classList.toggle('hidden');
+
+      // Change hamburger icon to X when menu is open
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenuButton.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        `;
+      } else {
+        mobileMenuButton.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        `;
+      }
+    });
+
+    // Close menu when clicking anywhere else on the page
+    document.addEventListener('click', function(e) {
+      if (!mobileMenu.contains(e.target) && e.target !== mobileMenuButton) {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        `;
+      }
+    });
+
+    // Close menu when a link is clicked
+    menuLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+        mobileMenuButton.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        `;
+      });
+    });
+  </script>
 </body>
 
 </html>
