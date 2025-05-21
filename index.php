@@ -37,7 +37,7 @@
     <section id="about" class="px-4 md:px-24 py-12 flex flex-col gap-y-5">
       <div>
         <h3 class="py-5 font-bold text-2xl">About Us</h3>
-        <p> Tech Hythe Limited (THL) is a diversified company operating at the forefront of the agro-allied and renewable energy sectors. We are committed to sustainable development, leveraging cutting-edge technologies and innovative strategies to drive growth across our core business areas. Our mission is to enhance agricultural productivity and efficiency while significantly contributing to the global transition toward renewable energy sources. </p>
+        <p> Tech Hythe Limited (THL) is a diversified company operating at the forefront of tech, agro-allied and renewable energy sectors. We are committed to sustainable development, leveraging cutting-edge technologies and innovative strategies to drive growth across our core business areas. Our mission is to enhance agricultural productivity and efficiency while significantly contributing to the global transition toward renewable energy sources. </p>
       </div>
       <div class="flex flex-col md:flex-row gap-4 flex-wrap">
         <img class="flex-grow object-cover h-48 rounded-md transition-transform transform hover:scale-105 duration-300" src="images/agro-farm-with-tractor.webp" alt="farm with tractor on it">
@@ -194,7 +194,11 @@
   </main>
   <footer class="text-center p-5 bg-[#03071e] rounded-t-3xl text-white font-bold">
     <p>&copy; <span id="current-year"></span> Tech Hythe Limited. All Rights Reserved.</p>
-    <p>+234 706 761 3160 | +234 805 933 0502 | <a href="mailto:info@thlimited.africa">info@thlimited.africa</a></p>
+    <p>
+      +44 790 163 200 <span title="United Kingdom" class="inline-block align-middle ml-1">🇬🇧</span> |
+      +234 805 933 0502 <span title="Nigeria" class="inline-block align-middle ml-1">🇳🇬</span> |
+      <a href="mailto:info@thlimited.africa">info@thlimited.africa</a>
+    </p>
   </footer>
 
   <script>
