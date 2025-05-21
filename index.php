@@ -15,7 +15,7 @@
   <div class="flex flex-col md:flex-row justify-between px-5 md:px-10 py-5 bg-[#03071e] rounded-b-3xl">
     <div class="flex justify-between items-center w-full md:w-auto">
       <header class="flex-shrink-0">
-        <img class="w-32" src="images/thl-logo.png" alt="thl logo">
+        <img class="w-20" src="images/thl-logo.png" alt="thl logo">
       </header>
       <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none" aria-label="Toggle menu">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

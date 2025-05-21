@@ -26,8 +26,9 @@ try {
   $mail->Username = $_ENV['EMAIL'];
   $mail->Password = $_ENV['PASSWORD'];
 
-  $mail->setFrom($email, $name);
-  $mail->addAddress($_ENV["EMAIL"], "Joshua");
+  $mail->setFrom($_ENV['EMAIL'], $name); // Use your own email as the sender
+  $mail->addReplyTo($email, $name);      // User's email as reply-to
+  $mail->addAddress($_ENV["EMAIL"], $name); // Use the form name as recipient name
 
   $mail->Subject = "Enquiry from $name";
   $mail->Body = "Phone Number: $phone\n $message";
